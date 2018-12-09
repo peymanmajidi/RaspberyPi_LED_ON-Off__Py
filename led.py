@@ -3,15 +3,9 @@ import time
 import pygame
 
 
-
-# calling for time to provide delays in program
-
-
 IO.setwarnings(False)
 IO.setmode (IO.BOARD)       # programming the GPIO by BOARD pin numbers, GPIO21 is called as PIN40
 IO.setup(40,IO.OUT)         # initialize digital pin40 as an output.
-
-
 
 
 # Initiate pygame
@@ -41,8 +35,7 @@ game_over = False
 flashing= False
 
 while not game_over:
-        time.sleep(0.05) 
-        
+        time.sleep(0.05)        
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game_over= True
@@ -70,13 +63,6 @@ while not game_over:
                 pygame.draw.rect(window, BLACK, [0,0,WIDTH,HEIGHT],0)
                 IO.output(40,0)
                 pygame.display.update()
-
-
-                pass
-
-
-
-
 
 
 
